@@ -1,0 +1,14 @@
+from fastapi import FastAPI
+import datetime
+
+app = FastAPI()
+@app.get("/")
+def time():
+    current_time = datetime.datetime.now()
+    return current_time
+
+
+if __name__ == "__main__":
+    current_time = time()
+    print(current_time)
+
